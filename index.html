@@ -75,6 +75,7 @@
       font-weight: 500;
       position: relative;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     nav a::after {
@@ -95,6 +96,10 @@
 
     nav a:hover::after {
       width: 60%;
+    }
+
+    nav a:active {
+      color: var(--secondary);
     }
 
     /* Hero Section */
@@ -909,13 +914,15 @@
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
- <body><!-- Header -->
+ <body>
+  <!-- Header -->
   <header>
    <div class="navbar-container">
     <div class="logo">
      🔬 ICoTriCE 2026
     </div>
-    <nav id="navbar"><a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
+    <nav id="navbar">
+     <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
     </nav>
    </div>
   </header><!-- Hero Section -->
@@ -943,7 +950,8 @@
       </div><span>Hybrid Mode (Physical &amp; Online)</span>
      </div>
     </div>
-    <div class="hero-cta"><button class="btn-primary" onclick="handleRegisterClick()">Register Now</button> <button class="btn-secondary" onclick="scrollToSection(event, 'about')">Learn More</button>
+    <div class="hero-cta">
+     <button class="btn-primary" onclick="handleRegisterClick()">Register Now</button> <button class="btn-secondary" onclick="scrollToSection(event, 'about')">Learn More</button>
     </div>
    </div>
   </section><!-- About Section -->
@@ -1236,7 +1244,8 @@
       2021
      </div>
      <h3 class="past-conference-title">1st ICoTriCE 2021</h3>
-     <div class="past-conference-publisher"><span class="publisher-badge">📚 IAP Publishing</span>
+     <div class="past-conference-publisher">
+      <span class="publisher-badge">📚 IAP Publishing</span>
      </div>
      <p class="past-conference-description">The inaugural conference brought together researchers and professionals to discuss emerging trends in chemical engineering and sustainable innovation.</p>
     </div>
@@ -1245,7 +1254,8 @@
       2024
      </div>
      <h3 class="past-conference-title">2nd ICoTriCE 2024</h3>
-     <div class="past-conference-publisher"><span class="publisher-badge">📖 Springer Books</span>
+     <div class="past-conference-publisher">
+      <span class="publisher-badge">📖 Springer Books</span>
      </div>
      <p class="past-conference-description">Building on our success, the second conference expanded its scope and published proceedings in renowned Springer Books series.</p>
     </div>
@@ -1279,14 +1289,11 @@
     <p style="font-size: 1rem; color: #666; line-height: 1.8; margin-top: 1.5rem;">Dedicated to advancing chemical engineering education, research, and innovation through international collaboration and excellence in academic discourse.</p>
     <div style="margin-top: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff, #e8eef5); border-radius: 12px; border-left: 4px solid var(--primary);">
      <div style="font-size: 0.95rem; color: #2c3e50; line-height: 1.8;">
-      <div style="margin-bottom: 0.5rem;">
-       <strong>Kangar, Perlis, Malaysia</strong>
+      <div style="margin-bottom: 0.5rem;"><strong>Kangar, Perlis, Malaysia</strong>
       </div>
-      <div>
-       <strong>📞</strong> +60-4-9798000
+      <div><strong>📞</strong> +60-4-9798000
       </div>
-      <div>
-       <strong>📧</strong> icotrce@unimap.edu.my
+      <div><strong>📧</strong> icotrce@unimap.edu.my
       </div>
      </div>
     </div>
@@ -1319,12 +1326,14 @@
      </div>
      <div class="footer-section">
       <h3>Contact Information</h3>
-      <div class="footer-links"><a href="tel:+60497988000">📞 +60-4-9798000</a> <a href="mailto:icotrce@unimap.edu.my">📧 icotrce@unimap.edu.my</a> <a href="#">📍 Kangar, Perlis, Malaysia</a>
+      <div class="footer-links">
+       <a href="tel:+60497988000">📞 +60-4-9798000</a> <a href="mailto:icotrce@unimap.edu.my">📧 icotrce@unimap.edu.my</a> <a href="#">📍 Kangar, Perlis, Malaysia</a>
       </div>
      </div>
      <div class="footer-section">
       <h3>Quick Links</h3>
-      <div class="footer-links"><a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a>
+      <div class="footer-links">
+       <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a>
       </div>
      </div>
     </div>
@@ -1394,5 +1403,5 @@
       setTimeout(() => message.remove(), 5000);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d763c91f0732441',t:'MTc3MjY4MzQ2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d7de94272ace454',t:'MTc3Mjc2Mzk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
