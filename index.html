@@ -200,6 +200,31 @@
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
+    .hero-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-logo {
+      height: 120px;
+      width: auto;
+      filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+      transition: transform 0.3s ease;
+    }
+
+    .hero-logo:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-title-with-logos {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
     .hero-meta {
       display: flex;
       flex-direction: column;
@@ -913,13 +938,13 @@
   </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
  </head>
  <body>
   <!-- Header -->
   <header>
    <div class="navbar-container">
-    <div class="logo">
-     🔬 ICoTriCE 2026
+    <div class="logo" style="display: flex; align-items: center; gap: 0.8rem;"><img src="https://i.imgur.com/aFOluc8.png" alt="ICoTriCE Logo" style="height: 45px; width: auto;" loading="lazy" onerror="console.error('Header logo failed to load:', this.src); this.style.display='none';"> <span>ICoTriCE 2026</span>
     </div>
     <nav id="navbar">
      <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
@@ -931,7 +956,11 @@
     <div class="hero-badge">
      🎓 3rd International Conference
     </div>
-    <h1 class="hero-title"><span id="hero-title">Trends in Chemical Engineering 2026</span></h1>
+    <div class="hero-logos"><img src="https://i.imgur.com/aFOluc8.png" alt="Organization Logo 1" class="hero-logo" loading="lazy" onerror="console.error('Logo 1 failed to load:', this.src); this.style.display='none';"><img src="https://i.imgur.com/zCJA6QA.png" alt="Organization Logo 2" class="hero-logo" loading="lazy" onerror="console.error('Logo 2 failed to load:', this.src); this.style.display='none';">
+    </div>
+    <div class="hero-title-with-logos">
+     <h1 class="hero-title"><span id="hero-title">Trends in Chemical Engineering 2026</span></h1>
+    </div>
     <p class="hero-subtitle" id="hero-theme">Innovations in Green Process Engineering, Energy, and Materials for a Sustainable Future</p>
     <div class="hero-meta">
      <div class="meta-item">
@@ -1403,5 +1432,5 @@
       setTimeout(() => message.remove(), 5000);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d7de94272ace454',t:'MTc3Mjc2Mzk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d7e01e402cf0969',t:'MTc3Mjc2NDk0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
