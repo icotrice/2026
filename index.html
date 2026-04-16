@@ -102,17 +102,24 @@
       color: var(--secondary);
     }
 
-    /* Hero Section */
+  /* Hero Section */
     .hero {
       margin-top: 70px;
       min-height: 100vh;
-      background: linear-gradient(135deg, #00b366 0%, #00d084 50%, #00a359 100%);
+      background: linear-gradient(135deg, rgba(0, 101, 50, 0.85) 0%, rgba(0, 130, 75, 0.85) 50%, rgba(0, 90, 45, 0.85) 100%),
+                  url('https://i.imgur.com/ElxgWLC.png') center/cover no-repeat;
+      background-blend-mode: multiply;
+      opacity: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
       padding: 2rem;
+    }
+
+    .hero-content {
+      opacity: 1;
     }
 
     .hero::before {
@@ -966,7 +973,7 @@
      <div class="meta-item">
       <div class="meta-icon">
        📅
-      </div><span id="hero-dates">September 21-22, 2026</span>
+      </div><span id="hero-dates">September 21, 2026</span>
      </div>
      <div class="meta-item">
       <div class="meta-icon">
@@ -1143,7 +1150,7 @@
      <div class="timeline-dot"></div>
      <div class="timeline-content">
       <div class="timeline-date">
-       Dec 31, 2025
+       May 30, 2026
       </div>
       <div class="timeline-event">
        Abstract Submission Deadline
@@ -1154,18 +1161,7 @@
      <div class="timeline-dot"></div>
      <div class="timeline-content">
       <div class="timeline-date">
-       Jan 31, 2026
-      </div>
-      <div class="timeline-event">
-       Abstract Acceptance Notification
-      </div>
-     </div>
-    </div>
-    <div class="timeline-item">
-     <div class="timeline-dot"></div>
-     <div class="timeline-content">
-      <div class="timeline-date">
-       Mar 31, 2026
+       June 30, 2026
       </div>
       <div class="timeline-event">
        Full Paper Submission Deadline
@@ -1176,10 +1172,10 @@
      <div class="timeline-dot"></div>
      <div class="timeline-content">
       <div class="timeline-date">
-       Apr 30, 2026
+       July 8, 2026
       </div>
       <div class="timeline-event">
-       Early Bird Registration Closes
+       Notification of Acceptance
       </div>
      </div>
     </div>
@@ -1187,10 +1183,10 @@
      <div class="timeline-dot"></div>
      <div class="timeline-content">
       <div class="timeline-date">
-       Jun 30, 2026
+       August 1, 2026
       </div>
       <div class="timeline-event">
-       Registration Deadline
+       Payment and Registration
       </div>
      </div>
     </div>
@@ -1198,10 +1194,21 @@
      <div class="timeline-dot"></div>
      <div class="timeline-content">
       <div class="timeline-date">
-       Sep 21-22, 2026
+       Sept 1, 2026
       </div>
       <div class="timeline-event">
-       Conference Days
+       Camera-ready Submission
+      </div>
+     </div>
+    </div>
+    <div class="timeline-item">
+     <div class="timeline-dot"></div>
+     <div class="timeline-content">
+      <div class="timeline-date">
+       Sept 21, 2026
+      </div>
+      <div class="timeline-event">
+       Conference
       </div>
      </div>
     </div>
@@ -1224,27 +1231,115 @@
      </div>
     </div>
    </div>
-  </section><!-- Conference Fee Section -->
+  </section><!-- Registration Rates Section -->
   <section class="section" id="fees">
    <div class="section-header">
-    <h2 class="section-title">Conference <span>Fee</span></h2>
-    <p class="section-subtitle">Choose your participation type</p>
-   </div>
-   <div class="registration-grid">
-    <div class="fee-card">
-     <div class="fee-category">
-      Local Participant
+    <h2 class="section-title">Registration <span>Rates</span></h2>
+    <p class="section-subtitle">Flexible pricing for all participation types</p>
+   </div><!-- Registration Rates Table -->
+   <div style="background: white; border: 2px solid #000; margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;"><!-- Header with "Rates" label -->
+    <div style="background: #c8e6c9; padding: 1rem 2rem; border-bottom: 2px solid #000;">
+     <div style="font-size: 1.3rem; font-weight: 700; color: #000;">
+      Rates
      </div>
-     <div class="fee-amount" id="local-fee">
-      RM1000
+    </div><!-- Main Table Structure -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+     <thead>
+      <tr style="border-bottom: 2px solid #000;">
+       <th rowspan="3" style="padding: 1rem 1.2rem; text-align: left; font-weight: 700; color: #000; border-right: 2px solid #000; vertical-align: middle;">Participant Type</th>
+       <th colspan="4" style="padding: 1rem 1.2rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Physical</strong></th>
+       <th colspan="4" style="padding: 1rem 1.2rem; text-align: center; font-weight: 700; color: #000;"><strong>Online</strong></th>
+      </tr>
+      <tr style="border-bottom: 2px solid #000;">
+       <th colspan="2" style="padding: 0.7rem 1.2rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Early Bird</strong></th>
+       <th colspan="2" style="padding: 0.7rem 1.2rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Normal</strong></th>
+       <th colspan="2" style="padding: 0.7rem 1.2rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Early Bird</strong></th>
+       <th colspan="2" style="padding: 0.7rem 1.2rem; text-align: center; font-weight: 700; color: #000;"><strong>Normal</strong></th>
+      </tr>
+      <tr style="border-bottom: 2px solid #000;">
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 1px solid #000;"><strong>Local (RM)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Int'l (USD)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 1px solid #000;"><strong>Local (RM)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Int'l (USD)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 1px solid #000;"><strong>Local (RM)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Int'l (USD)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000; border-right: 1px solid #000;"><strong>Local (RM)</strong></th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; color: #000;"><strong>Int'l (USD)</strong></th>
+      </tr>
+     </thead>
+     <tbody><!-- Oral Presenter -->
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Oral Presenter</strong></td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">100</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">320</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">1200</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">370</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">900</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">290</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">1100</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000;">340</td>
+      </tr><!-- Oral Presenter (Students) -->
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Oral Presenter (Students)</strong></td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">900</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">290</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">1050</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">330</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">800</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">270</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">950</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000;">300</td>
+      </tr><!-- UniMAP Staff -->
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>UniMAP Staff</strong></td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">900</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">–</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">1100</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">–</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">800</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">–</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">1000</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000;">–</td>
+      </tr><!-- Listener -->
+      <tr>
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; color: #000; border-right: 2px solid #000;"><strong>Listener</strong></td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">400</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">160</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">400</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">160</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">200</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 2px solid #000;">120</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000; border-right: 1px solid #000;">200</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; color: #000;">120</td>
+      </tr>
+     </tbody>
+    </table>
+   </div><!-- Information Notes -->
+   <div style="max-width: 1300px; margin: 2rem auto; padding: 2rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+     <div>
+      <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
+       📌 Early Bird Deadline
+      </div>
+      <div style="color: #333; font-size: 0.95rem;">
+       April 30, 2026
+      </div>
      </div>
-    </div>
-    <div class="fee-card">
-     <div class="fee-category">
-      International Participant
+     <div>
+      <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
+       💱 Currency
+      </div>
+      <div style="color: #333; font-size: 0.95rem;">
+       <strong>RM</strong> = Malaysian Ringgit | <strong>USD</strong> = US Dollar
+      </div>
      </div>
-     <div class="fee-amount" id="international-fee">
-      USD325
+     <div>
+      <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
+       ℹ️ Note
+      </div>
+      <div style="color: #333; font-size: 0.95rem;">
+       (–) indicates rate not available for this category
+      </div>
      </div>
     </div>
    </div>
@@ -1318,11 +1413,11 @@
     <p style="font-size: 1rem; color: #666; line-height: 1.8; margin-top: 1.5rem;">Dedicated to advancing chemical engineering education, research, and innovation through international collaboration and excellence in academic discourse.</p>
     <div style="margin-top: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff, #e8eef5); border-radius: 12px; border-left: 4px solid var(--primary);">
      <div style="font-size: 0.95rem; color: #2c3e50; line-height: 1.8;">
-      <div style="margin-bottom: 0.5rem;"><strong> Faculty of Chemical Engineering & Technology, UniMAP, Perlis, Malaysia</strong>
+      <div style="margin-bottom: 0.5rem;"><strong>Kangar, Perlis, Malaysia</strong>
       </div>
-      <div><strong>📞</strong> +016-4220302 (Assoc. Prof. Dr. Alina - Chair Person)
+      <div><strong>📞</strong> +60-4-9798000
       </div>
-      <div><strong>📧</strong> icotrice@gmail.com
+      <div><strong>📧</strong> icotrce@unimap.edu.my
       </div>
      </div>
     </div>
@@ -1356,7 +1451,7 @@
      <div class="footer-section">
       <h3>Contact Information</h3>
       <div class="footer-links">
-       <a href="+016-4220302">📞 +016-4220302 (Assoc. Prof. Dr. Alina - Chair Person) </a> <a href="mailto:icotrice@gmail.com">📧 icotrice@gmail.com</a> <a href="https://fktk.unimap.edu.my/">📍 Faculty of Chemical Engineering & Technology, UniMAP, Perlis, Malaysia</a>
+       <a href="tel:+60497988000">📞 +60-4-9798000</a> <a href="mailto:icotrce@unimap.edu.my">📧 icotrce@unimap.edu.my</a> <a href="#">📍 Kangar, Perlis, Malaysia</a>
       </div>
      </div>
      <div class="footer-section">
@@ -1380,7 +1475,7 @@
     const config = {
       conference_title: "3rd International Conference on Trends in Chemical Engineering 2026 (ICoTriCE 2026)",
       conference_theme: "Innovations in Green Process Engineering, Energy, and Materials for a Sustainable Future",
-      conference_dates: "September 21-22, 2026",
+      conference_dates: "September 21, 2026",
       conference_location: "Hotel Seri Malaysia, Kangar, Perlis, Malaysia",
       local_fee: "RM1000",
       international_fee: "USD325"
@@ -1434,6 +1529,3 @@
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d7e01e402cf0969',t:'MTc3Mjc2NDk0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
-
