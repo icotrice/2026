@@ -1525,12 +1525,20 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
       }
     }
 
-   function handleRegisterClick() {
+     function handleRegisterClick() {
       window.open('https://conference.frappehub.com/e/icotrice2026', '_blank');
     }
 
     function handleSubmissionClick() {
       window.open('https://conference.frappehub.com/event/107/', '_blank');
+    }function downloadTemplate(type) {
+      const templates = {
+        abstract: 'https://conference.frappehub.com/event/107/attachments/1728/3614/Abstract%20Template_ICoTRICE2026.docx',
+        fullpaper: 'https://conference.frappehub.com/event/107/attachments/1728/3618/ICoTriCE2026%20Manuscript%20Template.docx'
+      };
+      if (templates[type]) {
+        window.open(templates[type], '_blank');
+      }
     }
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ed0fc9705c5e41e',t:'MTc3NjMxOTQwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
