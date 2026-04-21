@@ -947,14 +947,13 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
  </head>
- <body>
-  <!-- Header -->
+<body><!-- Header -->
   <header>
    <div class="navbar-container">
-    <div class="logo" style="display: flex; align-items: center; gap: 0.8rem;"><img src="https://i.imgur.com/aFOluc8.png" alt="ICoTriCE Logo" style="height: 45px; width: auto;" loading="lazy" onerror="console.error('Header logo failed to load:', this.src); this.style.display='none';"> <span>ICoTriCE 2026</span>
+    <div class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
+     <img src="https://i.imgur.com/aFOluc8.png" alt="ICoTriCE Logo" style="height: 45px; width: auto;" loading="lazy" onerror="console.error('Header logo failed to load:', this.src); this.style.display='none';"> <span>ICoTriCE 2026</span>
     </div>
-    <nav id="navbar">
-     <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#registration" onclick="scrollToSection(event, 'registration')">Register</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
+    <nav id="navbar"><a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#submission" onclick="scrollToSection(event, 'submission')">Submit</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
     </nav>
    </div>
   </header><!-- Hero Section -->
@@ -1345,18 +1344,24 @@
      </div>
     </div>
    </div>
-  </section><!-- Registration Section -->
-  <section class="section" id="registration">
+   </section><!-- Registration Section -->
+  <section class="section" id="submission">
    <div class="section-header">
-    <h2 class="section-title">Ready to <span>Register?</span></h2>
-    <p class="section-subtitle">Secure your spot at ICoTriCE 2026</p>
+    <h2 class="section-title">Ready to <span>Submit?</span></h2>
+    <p class="section-subtitle">Share your research with the ICoTriCE 2026 community</p>
    </div>
-   <div style="background: linear-gradient(135deg, #f0f4ff, #e8eef5); border: 2px solid #e8eef5; border-radius: 15px; padding: 4rem 2rem; text-align: center; max-width: 600px; margin: 0 auto;">
+   <div style="background: linear-gradient(135deg, #f0f4ff, #e8eef5); border: 2px solid #e8eef5; border-radius: 15px; padding: 4rem 2rem; text-align: center; max-width: 900px; margin: 0 auto;">
     <div style="font-size: 2.5rem; margin-bottom: 1.5rem;">
-     ✨
+     📝
     </div>
-    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark);">Join Us at ICoTriCE 2026</h3>
-    <p style="font-size: 1.05rem; color: #666; line-height: 1.8; margin-bottom: 2.5rem;">Click the button below to register for the conference and secure your participation.</p><button class="btn-primary" onclick="handleRegisterClick()" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Register Now</button>
+    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark);">Submit Your Paper</h3>
+    <p style="font-size: 1.05rem; color: #666; line-height: 1.8; margin-bottom: 2.5rem;">Submit your abstract or full paper to ICoTriCE 2026. Use the templates below to ensure compliance with our submission guidelines.</p>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+     <button class="btn-primary" onclick="handleSubmissionClick()" style="padding: 1.2rem 3rem; font-size: 1.1rem;">📤 Open Submission Portal</button>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+      <button class="btn-secondary" onclick="downloadTemplate('abstract')" style="padding: 1rem 2rem; font-size: 1rem;">📄 Abstract Template</button> <button class="btn-secondary" onclick="downloadTemplate('fullpaper')" style="padding: 1rem 2rem; font-size: 1rem;">📋 Full Paper Template</button>
+     </div>
+    </div>
    </div>
   </section><!-- Past Conferences Section -->
   <section class="section" id="past-conferences">
