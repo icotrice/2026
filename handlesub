@@ -1344,6 +1344,14 @@
      </div>
     </div>
    </div>
+    </section><!-- Call for Reviewers Banner -->
+  <div style="background: linear-gradient(135deg, #7c3aed, #0066ff); color: white; padding: 2.5rem 2rem; text-align: center; margin: 3rem 0;">
+   <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; letter-spacing: 1px;">
+     🔍 CALL FOR REVIEWERS
+    </div>
+    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">We are seeking expert reviewers to help evaluate submitted papers. If you're interested in contributing to the peer-review process for ICoTriCE 2026, we'd love to hear from you!</p><button onclick="handleReviewerClick()" style="padding: 0.9rem 2.5rem; background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;">📧 Express Your Interest</button>
+   </div>
   </section><!-- Registration Section -->
   <section class="section" id="submission">
    <div class="section-header">
@@ -1539,6 +1547,10 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
       if (templates[type]) {
         window.open(templates[type], '_blank');
       }
+    }
+function handleReviewerClick() {
+      // Placeholder for reviewer interest link
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTjcQ7wNTKwhCnOiV1k6Z317lMugQaJFv68GiMH04DtXcbDg/viewform', '_blank');
     }
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ed0fc9705c5e41e',t:'MTc3NjMxOTQwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
