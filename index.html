@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
- <head>
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260817-01-f8ae3e5","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/7949ff62d67710d5.telemetry_sdk.js" integrity="sha512-KIvXA82Di44YY/RH9/63A9MuTuavYgDFG8PfErJn7Wli4K0LAOk+coo/aPXk3+ZNL96nHh9VYD4PE+fLes+laQ=="></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ICoTriCE 2026 - International Conference on Trends in Chemical Engineering</title>
-  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/7c520c0d71d7a06d.element_sdk.js" integrity="sha512-ZRhMhUorW8pmwd91OvkYXfNJMO7l1l3Dt8LinTPHSEXBz3TUAFKfKOO3bQE/KGcQJm6I4Ho+kKNLS9QZB8wyew=="></script>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <style>
     * {
@@ -530,6 +530,7 @@
       border: 4px solid var(--light);
       box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
       transition: all 0.3s ease;
+      object-fit: cover;
     }
 
     .speaker-card:hover .speaker-image {
@@ -877,6 +878,96 @@
       text-decoration: underline;
     }
 
+    /* Committee Tab Styles */
+    .committee-tabs-section {
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      margin-top: 3rem;
+    }
+
+    .committee-tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 0.5rem;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .committee-tab-btn {
+      padding: 0.75rem 2rem;
+      background: transparent;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .committee-tab-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .committee-tab-btn.active {
+      background: white;
+      color: #3b82f6;
+    }
+
+    .committee-tab-content {
+      display: none;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .committee-tab-content.active {
+      display: block;
+    }
+
+    .committee-section {
+      margin-bottom: 3rem;
+    }
+
+    .committee-section-title {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid rgba(255,255,255,0.3);
+      padding-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .committee-members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .committee-member-card {
+      background: rgba(255,255,255,0.08);
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+      backdrop-filter: blur(10px);
+      font-size: 0.95rem;
+    }
+
+    .committee-member-role {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .navbar-container {
@@ -941,19 +1032,23 @@
       .past-conferences-grid {
         grid-template-columns: 1fr;
       }
+
+      .committee-members-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" type="text/javascript" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <style>body { box-sizing: border-box; }</style>
  </head>
-<body><!-- Header -->
+ <body><!-- Header -->
   <header>
    <div class="navbar-container">
     <div class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
      <img src="https://i.imgur.com/aFOluc8.png" alt="ICoTriCE Logo" style="height: 45px; width: auto;" loading="lazy" onerror="console.error('Header logo failed to load:', this.src); this.style.display='none';"> <span>ICoTriCE 2026</span>
     </div>
-    <nav id="navbar"><a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#submission" onclick="scrollToSection(event, 'submission')">Submit</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
+    <nav id="navbar"><a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#about" onclick="scrollToSection(event, 'about')">About</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#timeline" onclick="scrollToSection(event, 'timeline')">Timeline</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#fees" onclick="scrollToSection(event, 'fees')">Fees</a> <a href="#submission" onclick="scrollToSection(event, 'submission')">Submit</a> <a href="#past-conferences" onclick="scrollToSection(event, 'past-conferences')">Past Events</a> <a href="#publication" onclick="scrollToSection(event, 'publication')">Publication</a> <a href="#committees" onclick="scrollToSection(event, 'committees')">Committees</a> <a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
     </nav>
    </div>
   </header><!-- Hero Section -->
@@ -1212,7 +1307,7 @@
      </div>
     </div>
    </div>
-</section><!-- Speakers Section -->
+  </section><!-- Speakers Section -->
   <section class="section" id="speakers">
    <div class="section-header">
     <h2 class="section-title">Meet the <span>Keynote Speakers</span></h2>
@@ -1231,82 +1326,80 @@
      </div>
     </div>
    </div>
-   </div>
-  </section><section class="section" id="fees">
-  <div class="section-header">
+  </section>
+  <section class="section" id="fees">
+   <div class="section-header">
     <h2 class="section-title">Registration <span>Rates</span></h2>
     <p class="section-subtitle">Flexible pricing for all participation types</p>
-  </div>
-
-  <div style="background: white; border: 1px solid #000; margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+   </div>
+   <div style="background: white; border: 1px solid #000; margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
     <table style="width: 100%; border-collapse: collapse; font-size: 1rem; color: #000;">
-      <thead>
-        <tr style="background-color: #a2cc94; border-bottom: 1px solid #000;">
-          <th rowspan="2" style="padding: 1rem 1.2rem; text-align: left; font-weight: 700; border-right: 1px solid #000; width: 28%; vertical-align: middle;">Rates</th>
-          <th colspan="2" style="padding: 0.8rem 1.2rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">Physical</th>
-          <th colspan="2" style="padding: 0.8rem 1.2rem; text-align: center; font-weight: 700;">Online</th>
-        </tr>
-        <tr style="background-color: #a2cc94; border-bottom: 1px solid #000;">
-          <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">Local (RM)</th>
-          <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">International (USD)</th>
-          <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">Local (RM)</th>
-          <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; width: 18%;">International (USD)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="border-bottom: 1px solid #000;">
-          <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Oral Presenter</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">800</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">200</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">600</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">150</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #000;">
-          <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">UniMAP Staff</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">600</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">NA</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">400</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">NA</td>
-        </tr>
-        <tr style="border-bottom: 1px solid #000;">
-          <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Listener</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">150</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">40</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">80</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">20</td>
-        </tr>
-        <tr>
-          <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Without publication</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">250</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">65</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">150</td>
-          <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">40</td>
-        </tr>
-      </tbody>
+     <thead>
+      <tr style="background-color: #a2cc94; border-bottom: 1px solid #000;">
+       <th rowspan="2" style="padding: 1rem 1.2rem; text-align: left; font-weight: 700; border-right: 1px solid #000; width: 28%; vertical-align: middle;">Rates</th>
+       <th colspan="2" style="padding: 0.8rem 1.2rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">Physical</th>
+       <th colspan="2" style="padding: 0.8rem 1.2rem; text-align: center; font-weight: 700;">Online</th>
+      </tr>
+      <tr style="background-color: #a2cc94; border-bottom: 1px solid #000;">
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">Local (RM)</th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">International (USD)</th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000; width: 18%;">Local (RM)</th>
+       <th style="padding: 0.7rem 0.8rem; text-align: center; font-weight: 700; width: 18%;">International (USD)</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Oral Presenter</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">800</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">200</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">600</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">150</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">UniMAP Staff</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">600</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">NA</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">400</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">NA</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #000;">
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Listener</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">150</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">40</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">80</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">20</td>
+      </tr>
+      <tr>
+       <td style="padding: 0.9rem 1.2rem; font-weight: 700; border-right: 1px solid #000;">Without publication</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">250</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">65</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700; border-right: 1px solid #000;">150</td>
+       <td style="padding: 0.9rem 0.8rem; text-align: center; font-weight: 700;">40</td>
+      </tr>
+     </tbody>
     </table>
-  </div>
-
-  <div style="max-width: 1200px; margin: 2rem auto; padding: 2rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+   </div>
+   <div style="max-width: 1200px; margin: 2rem auto; padding: 2rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
-      <div>
-        <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
-          💱 Currency
-        </div>
-        <div style="color: #333; font-size: 0.95rem;">
-          <strong>RM</strong> = Malaysian Ringgit | <strong>USD</strong> = US Dollar
-        </div>
+     <div>
+      <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
+       💱 Currency
       </div>
-      <div>
-        <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
-          ℹ️ Note
-        </div>
-        <div style="color: #333; font-size: 0.95rem;">
-          <strong>NA</strong> indicates rate is not applicable for this specific category
-        </div>
+      <div style="color: #333; font-size: 0.95rem;">
+       <strong>RM</strong> = Malaysian Ringgit | <strong>USD</strong> = US Dollar
       </div>
+     </div>
+     <div>
+      <div style="font-weight: 700; color: #000; margin-bottom: 0.5rem;">
+       ℹ️ Note
+      </div>
+      <div style="color: #333; font-size: 0.95rem;">
+       <strong>NA</strong> indicates rate is not applicable for this specific category
+      </div>
+     </div>
     </div>
-  </div>
-    </section><!-- Call for Reviewers Banner -->
+   </div>
+  </section><!-- Call for Reviewers Banner -->
   <div style="background: background; color: #666; padding: 2.5rem 2rem; text-align: center; margin: 3rem 0;">
    <div style="max-width: 1400px; margin: 0 auto;">
     <div style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; letter-spacing: 1px;">
@@ -1314,7 +1407,7 @@
     </div>
     <p style="font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">We are seeking expert reviewers to help evaluate submitted papers. If you're interested in contributing to the peer-review process for ICoTriCE 2026, we'd love to hear from you!</p><button onclick="handleReviewerClick()" style="padding: 0.9rem 2.5rem; background: rgba(255, 255, 255, 0.2); color: #666; border: 2px solid white; border-radius: 50px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px;">📧 Express Your Interest</button>
    </div>
-  </section><!-- Registration Section -->
+  </div><!-- Registration Section -->
   <section class="section" id="submission">
    <div class="section-header">
     <h2 class="section-title">Ready to <span>Submit?</span></h2>
@@ -1360,48 +1453,48 @@
     </div>
    </div>
   </section><!-- Publication Section -->
-   <section class="section" id="publication">
-    <div class="section-header">
-     <h2 class="section-title">Publication <span>Opportunities</span></h2>
-     <p class="section-subtitle">Share your research in prestigious indexed venues</p>
-    </div>
-    <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
-     <div style="background: white; border-radius: 15px; padding: 3rem 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-      <div style="text-align: center; margin-bottom: 2.5rem;">
-       <div style="font-size: 1.3rem; font-weight: 700; color: var(--dark); letter-spacing: 1px; margin-bottom: 1.5rem;">
-        📚 INDEXED JOURNALS
-       </div>
-       <p style="font-size: 1.05rem; line-height: 1.8; color: #2c3e50;">Selected accepted papers at ICoTriCE 2026 will be published in MyCite-indexed journal, Reaction Kinetics Mechanism and Catalysis (Q3) and The International Journal of Nanoelectronics and Materials (Q4), subject to rigorous peer review and the editor's final decision.</p>
+  <section class="section" id="publication">
+   <div class="section-header">
+    <h2 class="section-title">Publication <span>Opportunities</span></h2>
+    <p class="section-subtitle">Share your research in prestigious indexed venues</p>
+   </div>
+   <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+    <div style="background: white; border-radius: 15px; padding: 3rem 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+     <div style="text-align: center; margin-bottom: 2.5rem;">
+      <div style="font-size: 1.3rem; font-weight: 700; color: var(--dark); letter-spacing: 1px; margin-bottom: 1.5rem;">
+       📚 INDEXED JOURNALS
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2.5rem;">
-       <div style="background: #f8f9ff; border: 2px solid #e8eef5; border-radius: 12px; padding: 2rem; text-align: center;">
-        <img src="https://i.imgur.com/2llZkmO.jpeg" alt="International Journal of Nanoelectronics and Materials" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" loading="lazy" onerror="console.error('Journal image failed:', this.src); this.style.background='linear-gradient(135deg, #0066ff, #7c3aed)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='0.9rem'; this.textContent='Journal Image';">
-        <div style="font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">
-         International Journal of Nanoelectronics and Materials
-        </div>
-        <div style="font-size: 0.95rem; color: var(--primary); font-weight: 600;">
-         Q4 - Scopus Indexed
-        </div>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #2c3e50;">Selected accepted papers at ICoTriCE 2026 will be published in MyCite-indexed journal, Reaction Kinetics Mechanism and Catalysis (Q3) and The International Journal of Nanoelectronics and Materials (Q4), subject to rigorous peer review and the editor's final decision.</p>
+     </div>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2.5rem;">
+      <div style="background: #f8f9ff; border: 2px solid #e8eef5; border-radius: 12px; padding: 2rem; text-align: center;">
+       <img src="https://i.imgur.com/2llZkmO.jpeg" alt="International Journal of Nanoelectronics and Materials" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" loading="lazy" onerror="console.error('Journal image failed:', this.src); this.style.background='linear-gradient(135deg, #0066ff, #7c3aed)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='0.9rem'; this.textContent='Journal Image';">
+       <div style="font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">
+        International Journal of Nanoelectronics and Materials
        </div>
-       <div style="background: #f8f9ff; border: 2px solid #e8eef5; border-radius: 12px; padding: 2rem; text-align: center;">
-        <img src="https://i.imgur.com/8wtcpPA.jpeg" alt="Reaction Kinetics Mechanism and Catalysis" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" loading="lazy" onerror="console.error('Journal image failed:', this.src); this.style.background='linear-gradient(135deg, #7c3aed, #0066ff)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='0.9rem'; this.textContent='Journal Image';">
-        <div style="font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">
-         Reaction Kinetics Mechanism and Catalysis
-        </div>
-        <div style="font-size: 0.95rem; color: var(--primary); font-weight: 600;">
-         Q3 - Scopus Indexed
-        </div>
+       <div style="font-size: 0.95rem; color: var(--primary); font-weight: 600;">
+        Q4 - Scopus Indexed
+       </div>
+      </div>
+      <div style="background: #f8f9ff; border: 2px solid #e8eef5; border-radius: 12px; padding: 2rem; text-align: center;">
+       <img src="https://i.imgur.com/8wtcpPA.jpeg" alt="Reaction Kinetics Mechanism and Catalysis" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;" loading="lazy" onerror="console.error('Journal image failed:', this.src); this.style.background='linear-gradient(135deg, #7c3aed, #0066ff)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='white'; this.style.fontSize='0.9rem'; this.textContent='Journal Image';">
+       <div style="font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">
+        Reaction Kinetics Mechanism and Catalysis
+       </div>
+       <div style="font-size: 0.95rem; color: var(--primary); font-weight: 600;">
+        Q3 - Scopus Indexed
        </div>
       </div>
      </div>
     </div>
-  </section><!-- Committees Section -->
+   </div>
+  </section><!-- Committees Section with Tabs -->
   <section class="section" id="committees">
    <div class="section-header">
     <h2 class="section-title">Organizer <span></span></h2>
     <p class="section-subtitle">Conference hosted by leading institution</p>
    </div>
-   <div style="background: white; border: 2px solid #e8eef5; border-radius: 15px; padding: 4rem 2rem; text-align: center; color: #2c3e50; max-width: 800px; margin: 0 auto;">
+   <div style="background: white; border: 2px solid #e8eef5; border-radius: 15px; padding: 4rem 2rem; text-align: center; color: #2c3e50; max-width: 800px; margin: 0 auto; margin-bottom: 3rem;">
     <div style="font-size: 3.5rem; margin-bottom: 1.5rem;">
      🏫
     </div>
@@ -1410,12 +1503,181 @@
     <p style="font-size: 1rem; color: #666; line-height: 1.8; margin-top: 1.5rem;">Dedicated to advancing chemical engineering education, research, and innovation through international collaboration and excellence in academic discourse.</p>
     <div style="margin-top: 2.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff, #e8eef5); border-radius: 12px; border-left: 4px solid var(--primary);">
      <div style="font-size: 0.95rem; color: #2c3e50; line-height: 1.8;">
-      <div style="margin-bottom: 0.5rem;"><strong>Kompleks Pusat Pengajian Jejawi 3, Kawasan Perindustrian Jejawi, 
-Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
+      <div style="margin-bottom: 0.5rem;"><strong>Kompleks Pusat Pengajian Jejawi 3, Kawasan Perindustrian Jejawi, Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
       </div>
       <div><strong>📞</strong> +6016-4420302 (Assoc. Prof. Dr. Alina)
       </div>
       <div><strong>📧</strong> icotrice2026@unimap.edu.my
+      </div>
+     </div>
+    </div>
+   </div><!-- Committee Members Tabbed Section -->
+   <div class="committee-tabs-section">
+    <div class="committee-tab-buttons">
+     <button class="committee-tab-btn active" onclick="switchCommitteeTab('organizer')">Organizer</button> <button class="committee-tab-btn" onclick="switchCommitteeTab('members')">Committee Members</button>
+    </div><!-- Organizer Tab -->
+    <div id="organizer-tab" class="committee-tab-content active">
+     <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">Organizing Institution</h2>
+     <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; text-align: center;">
+      <div style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 700;">
+       Faculty of Chemical Engineering &amp; Technology
+      </div>
+      <div style="font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95;">
+       Universiti Malaysia Perlis (UniMAP)
+      </div>
+      <p style="font-size: 1rem; line-height: 1.8; opacity: 0.9; max-width: 700px; margin: 0 auto;">The Faculty of Chemical Engineering &amp; Technology at UniMAP is dedicated to fostering innovation, advancing research, and developing future leaders in chemical engineering. We are proud to host the 3rd International Conference on Trends in Chemical Engineering (ICoTriCE 2026).</p>
+     </div>
+    </div><!-- Committee Members Tab -->
+    <div id="members-tab" class="committee-tab-content">
+     <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">Committee Members</h2><!-- Executive Committee -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">EXECUTIVE COMMITTEE</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         PATRON
+        </div>Lt. Kol. Prof. Dato' Ts. Dr. Zaliman Sauli
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         ADVISOR
+        </div>Assoc. Prof. Ir. Dr. Mohd Firdaus Omar
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         CHAIR
+        </div>Assoc. Prof. Dr. Alina Rahayu bt Mohamed
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         CO-CHAIR
+        </div>Assoc. Prof. Dr. Akmal Hadi Ma'Radi
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         SECRETARY I
+        </div>Dr. Nor Helya Iman Kamaludin
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         SECRETARY II
+        </div>Dr. Nurshieren Yahaya
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         TREASURER I
+        </div>Dr. Syazwani Mahmad Puzi
+       </div>
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         TREASURER II
+        </div>Dr. Nor Fauziah Zainudin
+       </div>
+      </div>
+     </div><!-- Technical Review -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">TECHNICAL REVIEW</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Assoc. Prof. Dr. Mohd Irfan Hatim Mohamed Dzahir
+       </div>
+       <div class="committee-member-card">
+        Dr. Wan Khairunnisa Wan Ramli
+       </div>
+      </div>
+     </div><!-- Technical and Special Task -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">TECHNICAL AND SPECIAL TASK</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Dr. Abdul Latif Abdul Rani
+       </div>
+       <div class="committee-member-card">
+        Dr. Johan Ariff Mohtar
+       </div>
+      </div>
+     </div><!-- Frappe Hub -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">FRAPPE HUB</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Dr. Maisara Azad Mat Akhir
+       </div>
+      </div>
+     </div><!-- Conference Secretariat -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">CONFERENCE SECRETARIAT</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Dr. Nor Aida Yusoff (L)
+       </div>
+       <div class="committee-member-card">
+        Dr. Saleha Shamsudin
+       </div>
+       <div class="committee-member-card">
+        Pn. Sriyana Abdullah
+       </div>
+       <div class="committee-member-card">
+        Cik Azlinda Abdul Ghani
+       </div>
+       <div class="committee-member-card">
+        Cik Nor Munirah Rohaizad
+       </div>
+      </div>
+     </div><!-- Publication Committee -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">PUBLICATION COMMITTEE</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        <div class="committee-member-role">
+         PM
+        </div>Dr. Alina Rahayu Mohamed (L)
+       </div>
+       <div class="committee-member-card">
+        Dr. Nur Maizatul Shima Adzali
+       </div>
+       <div class="committee-member-card">
+        Dr. Nurulhuda Bashirom
+       </div>
+       <div class="committee-member-card">
+        Dr. Nur Zatul 'Iffah Zakaria
+       </div>
+       <div class="committee-member-card">
+        Pn. Siti Nor Azreen Ahmad Termizi
+       </div>
+      </div>
+     </div><!-- Publicity and Promotion -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">PUBLICITY AND PROMOTION</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Dr. Amin Rukaini Mustafa (L)
+       </div>
+       <div class="committee-member-card">
+        Dr. Zulkarnain Mohamed Idris
+       </div>
+       <div class="committee-member-card">
+        Dr. Adilah Ayoib
+       </div>
+      </div>
+     </div><!-- Liaison Officer & External Relations -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">LIAISON OFFICER &amp; EXTERNAL RELATION</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Assoc. Prof. Dr. Alina Rahayu Mohamed
+       </div>
+       <div class="committee-member-card">
+        Assoc. Prof. Dr. Midhat Nabil Ahmad Salimi
+       </div>
+      </div>
+     </div><!-- Sponsorship -->
+     <div class="committee-section">
+      <h3 class="committee-section-title">SPONSORSHIP</h3>
+      <div class="committee-members-grid">
+       <div class="committee-member-card">
+        Assoc. Prof. Dr. Midhat Nabil Ahmad Salimi
+       </div>
       </div>
      </div>
     </div>
@@ -1455,7 +1717,7 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
      <div class="footer-section">
       <h3>Quick Links</h3>
       <div class="footer-links">
-       <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#registration" onclick="scrollToSection(event, 'submission')">Register</a>
+       <a href="#home" onclick="scrollToSection(event, 'home')">Home</a> <a href="#topics" onclick="scrollToSection(event, 'topics')">Topics</a> <a href="#speakers" onclick="scrollToSection(event, 'speakers')">Speakers</a> <a href="#registration" onclick="scrollToSection(event, 'submission')">Register</a> <a href="#committees" onclick="scrollToSection(event, 'committees')">Committees</a>
       </div>
      </div>
     </div>
@@ -1486,8 +1748,6 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
         document.getElementById('hero-theme').textContent = newConfig.conference_theme || config.conference_theme;
         document.getElementById('hero-dates').textContent = newConfig.conference_dates || config.conference_dates;
         document.getElementById('hero-location').textContent = newConfig.conference_location || config.conference_location;
-        document.getElementById('local-fee').textContent = newConfig.local_fee || config.local_fee;
-        document.getElementById('international-fee').textContent = newConfig.international_fee || config.international_fee;
       },
       mapToCapabilities: (cfg) => ({
         recolorables: [],
@@ -1499,9 +1759,7 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
         ["conference_title", cfg.conference_title || config.conference_title],
         ["conference_theme", cfg.conference_theme || config.conference_theme],
         ["conference_dates", cfg.conference_dates || config.conference_dates],
-        ["conference_location", cfg.conference_location || config.conference_location],
-        ["local_fee", cfg.local_fee || config.local_fee],
-        ["international_fee", cfg.international_fee || config.international_fee]
+        ["conference_location", cfg.conference_location || config.conference_location]
       ])
     };
 
@@ -1517,13 +1775,34 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
       }
     }
 
-     function handleRegisterClick() {
+    function switchCommitteeTab(tabName) {
+      // Hide all tabs
+      document.getElementById('organizer-tab').classList.remove('active');
+      document.getElementById('members-tab').classList.remove('active');
+      
+      // Show selected tab
+      document.getElementById(tabName + '-tab').classList.add('active');
+      
+      // Update button styles
+      const buttons = document.querySelectorAll('.committee-tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if ((tabName === 'organizer' && btn.textContent === 'Organizer') || 
+            (tabName === 'members' && btn.textContent === 'Committee Members')) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function handleRegisterClick() {
       window.open('https://conference.frappehub.com/e/icotrice2026', '_blank');
     }
 
     function handleSubmissionClick() {
       window.open('https://conference.frappehub.com/event/107/', '_blank');
-    }function downloadTemplate(type) {
+    }
+
+    function downloadTemplate(type) {
       const templates = {
         abstract: 'https://conference.frappehub.com/event/107/attachments/1728/3614/Abstract%20Template_ICoTRICE2026.docx',
         fullpaper: 'https://conference.frappehub.com/event/107/attachments/1728/3618/ICoTriCE2026%20Manuscript%20Template.docx'
@@ -1532,10 +1811,10 @@ Universiti Malaysia Perlis (UniMAP), 02600 Arau, Perlis, Malaysia</strong>
         window.open(templates[type], '_blank');
       }
     }
-function handleReviewerClick() {
-      // Placeholder for reviewer interest link
+
+    function handleReviewerClick() {
       window.open('https://docs.google.com/forms/d/e/1FAIpQLSeTjcQ7wNTKwhCnOiV1k6Z317lMugQaJFv68GiMH04DtXcbDg/viewform', '_blank');
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ed0fc9705c5e41e',t:'MTc3NjMxOTQwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ </body>
 </html>
